@@ -9,9 +9,11 @@
 <body>
     <div class="container">   
         <h1>Decipher ⌇ a1z26</h1>
-        <form onsubmit="decrypt()" action="javascript:(0);">
-            <label for="codeInput">Input your code</label>
-            <input autofocus type="text" name="code-input" id="codeInput">
+        <form onsubmit="decryptA1Z26()" action="javascript:(0);">
+            <label for="cipherInput">Input your number</label>
+            <input autofocus type="text" name="number-input" id="numberInput">
+            <label for="cipherInput">Input the key</label>
+            <input autofocus type="text" name="key-input" id="keyInput">
             <input type="submit" value="DECRYPT">
         </form>
         <div class="resultArea"><span id="result">result</span></div>
