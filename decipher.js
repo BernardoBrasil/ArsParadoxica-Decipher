@@ -1,8 +1,19 @@
-const alphabet = [' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+let blue = [' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+let red = ['z', 'y', 'x', 'w', 'v', 'u', 't', 's', 'r', 'q', 'p', 'o', 'n', 'm', 'l', 'k', 'j', 'i', 'h', 'g', 'f', 'e', 'd', 'c', 'b', 'a', ' '];
+let alphabet = []
 const rxNumber = /\d{1,2}|\./g
 const rxWord = /\w|\s/g
 
 function decipher() {
+    let colorInput = document.getElementById('colorInput').value;
+
+    if (colorInput == 'red'){
+      //FIXME: When in 'red' alphabet, needs one step more
+      alphabet = red
+    } else {
+      alphabet = blue
+    }
+
   // function decryptA1Z26() {
     let numberIput = document.getElementById('numberInput').value;
     console.log(numberIput)
@@ -21,9 +32,13 @@ function decipher() {
     }
   // }
 
+  console.log(A1Z26Result)
+
   // function decryptVigenere() {
     let cipherInput = A1Z26Result
     let keyInput = document.getElementById('keyInput').value;
+
+    console.log(keyInput)
 
     //Transform cipher and key input strings into arrays
     let cipherMatch = cipherInput.match(rxWord)
@@ -87,7 +102,7 @@ function decipher() {
       // console.log(result)
     }
 
-    // console.log(result)
+    console.log(result)
   // }
 
   document.getElementById('result').innerText = result

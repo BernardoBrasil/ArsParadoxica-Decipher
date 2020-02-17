@@ -10,6 +10,8 @@
     <div class="container">   
         <h1>Decipher ⌇ ars paradoxica</h1>
         <form onsubmit="decipher()" action="javascript:(0);">
+            <label for="colorInput">Input the color</label>
+            <input autofocus type="text" name="color-input" id="colorInput">
             <label for="cipherInput">Input the number</label>
             <input autofocus type="text" name="number-input" id="numberInput">
             <label for="cipherInput">Input the key</label>
@@ -18,6 +20,6 @@
         </form>
         <div class="resultArea"><span id="result">result</span></div>
     </div>
-    <script src="A1Z26.js"></script>
+    <script src="decipher.js"></script>
 </body>
 </html>
